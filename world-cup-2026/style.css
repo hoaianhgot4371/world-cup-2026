@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #17233b;
+  background: #f3f7fb;
+}
+
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: 10px;
+  padding: 12px 18px;
+  color: #ffffff;
+  background: #17233b;
+  border-radius: 6px;
+  z-index: 10;
+}
+
+.skip-link:focus {
+  left: 10px;
+}
+
+header {
+  padding: 34px 20px 0;
+  text-align: center;
+  color: #ffffff;
+  background: linear-gradient(135deg, #071f4a, #007a5e);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 42px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+nav a {
+  padding: 13px 22px;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 10px 10px 0 0;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+nav a:hover,
+nav a:focus,
+nav a.active {
+  color: #071f4a;
+  background-color: #f4d35e;
+  transform: translateY(-4px);
+}
+
+main {
+  width: min(1100px, 92%);
+  margin: 30px auto;
+}
+
+h2 {
+  text-align: center;
+  color: #075a4a;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 48% 48%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+.hero img,
+.host-list img,
+.stadium-grid img {
+  width: 100%;
+  border: 5px solid #ffffff;
+  padding: 5px;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(7, 31, 74, 0.18);
+}
+
+.facts {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 35px;
+}
+
+.facts article {
+  min-width: 180px;
+  padding: 22px;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 14px;
+}
+
+.facts strong,
+.facts span {
+  display: block;
+}
+
+.facts strong {
+  font-size: 38px;
+  color: #007a5e;
+}
+
+.host-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.host-list article {
+  flex: 1 1 280px;
+  padding: 18px;
+  background: #ffffff;
+  border-radius: 18px;
+}
+
+.host-list article:nth-child(2) {
+  background: #fff4f1;
+}
+
+.stadium-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 42%);
+  justify-content: space-around;
+  align-items: center;
+  row-gap: 28px;
+}
+
+figure {
+  margin: 0;
+  padding: 12px;
+  background: #ffffff;
+  border-radius: 18px;
+}
+
+.stadium-grid figure:nth-child(odd) img {
+  border-radius: 50px 12px 50px 12px;
+  border-color: #f4d35e;
+}
+
+figcaption {
+  padding: 10px 4px 2px;
+  text-align: center;
+  font-weight: bold;
+}
+
+footer {
+  padding: 18px;
+  text-align: center;
+  color: #ffffff;
+  background: #071f4a;
+}
+
+@media (max-width: 700px) {
+  .hero,
+  .stadium-grid {
+    grid-template-columns: 100%;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    border-radius: 8px;
+  }
+}
